@@ -1,0 +1,23 @@
+{
+    "ssl_server": "smtp.qq.com",
+    "ssl_port": 465,
+
+    "mail_username": "2846702977@qq.com",
+    "mail_password": "sessnscyvewwdfha",
+
+    "from_nickname": "[{code:s}]-Report",
+
+    "target_addresses": [
+        "xp.ji.cas@gmail.com",
+        "qingsongzhao@tongji.edu.cn"],
+
+    "attachments":[
+        "{log_name:s}_verbose.txt",
+        "{log_name:s}_train_epoch.csv",
+        "{log_name:s}_train_batch.csv"
+    ],
+    "online_links":{
+      "https://intb.cnwol.cn/": "https://intb.cnwol.cn/#scalars&regexInput={log_name:s}&run={log_name:s}",
+      "https://tb.cnwol.cn:8443": "https://tb.cnwol.cn:8443/#scalars&regexInput={log_name:s}&run={log_name:s}"
+    }
+}

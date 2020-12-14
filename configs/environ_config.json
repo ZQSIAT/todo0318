@@ -1,0 +1,9 @@
+{
+    "environ":{
+        "DISPLAY":"ubuntu:16.04"
+    },
+
+    "on_plot":{
+        "backend":"Qt5Agg"
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "dataset": {
+        "data_name": "NTU_RGB+D",
+        "data_dosage": 1.0,
+        "small_validation": true,
+        "modality": "Depth",
+        "is_gradient": true,
+        "is_normalization": false,
+        "is_vector": false,
+        "is_segmented": false,
+        "dual_input": true,
+        "is_cotrain": false,
+        "eval_protocol": "1_cross_subjects",
+        "spatial_transform": "spatial_group_crop",
+        "temporal_transform": "snapshot_sampling",
+        "regenerate_protocol_files": false,
+        "batch_size": 64,
+        "train_shuffle": true
+    },
+
+    "cuda":{
+        "disable": false,
+        "gpu_card": "0,1,2,3",
+        "pin_memory": true
+    },
+
+    "random_seed": 2,
+
+    "validation": {
+        "validation_split": 0.1,
+        "shuffle": true
+    },
+
+    "model": {
+        "net_arch": "Resnet_3D_34",
+        "optimizer": "SGD_1e-1",
+        "adjust_lr": "decay_every_epoch_2010",
+        "criterion": "cross_entropy_loss",
+        "metrics": ["accuracy_percent"]
+    },
+
+    "train": {
+        "epochs": 100,
+        "log_interval": 20,
+        "checkpoint_interval": 20,
+        "overfit_threshold": [99.9, 80.0, 20],
+        "mail_notification": true,
+        "default_code": "ActionNet",
+        "plot_net_arch": true,
+        "plot_confusion_matrix": false,
+        "tensorboard": true
+    }
+}

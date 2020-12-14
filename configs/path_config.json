@@ -1,0 +1,38 @@
+{
+    "10.10.1.32":{
+        "data_root": "/data1/lhj/_zqs/datasets",
+        "deploy_root": "/data1/lhj/_zqs/deployment/<$data_name>_output",
+        "tensorboard_root": "/data1/lhj/_zqs/action_tensor_board",
+        "protocol_root": "<$deploy_root>/protocols",
+        "log_root": "<$deploy_root>/logs",
+        "checkpoint_root": "<$deploy_root>/checkpoints",
+        "evaluate_root": "<$deploy_root>/evaluate_root"
+    },
+    "10.60.102.249":{
+        "data_root": "/home/432/zhaoqingsong/data",
+        "deploy_root": "/home/432/zhaoqingsong/deployment/<$data_name>_output",
+        "tensorboard_root": "/home/432/zhaoqingsong/action_tensor_board",
+        "protocol_root": "<$deploy_root>/protocols",
+        "log_root": "<$deploy_root>/logs",
+        "checkpoint_root": "<$deploy_root>/checkpoints",
+        "evaluate_root": "<$deploy_root>/evaluate_root"
+    },
+    "10.60.102.249:4022":{
+        "data_root": "/home/zqs/data",
+        "deploy_root": "/home/432/zhaoqingsong/deployment/<$data_name>_output",
+        "tensorboard_root": "/home/432/zhaoqingsong/action_tensor_board",
+        "protocol_root": "<$deploy_root>/protocols",
+        "log_root": "<$deploy_root>/logs",
+        "checkpoint_root": "<$deploy_root>/checkpoints",
+        "evaluate_root": "<$deploy_root>/evaluate_root"
+    },
+    "10.60.102.249:5022":{
+        "data_root": "/home/zhaoqingsong/data",
+        "deploy_root": "/home/432/zhaoqingsong/deployment/<$data_name>_output",
+        "tensorboard_root": "/home/432/zhaoqingsong/action_tensor_board",
+        "protocol_root": "<$deploy_root>/protocols",
+        "log_root": "<$deploy_root>/logs",
+        "checkpoint_root": "<$deploy_root>/checkpoints",
+        "evaluate_root": "<$deploy_root>/evaluate_root"
+    }
+}

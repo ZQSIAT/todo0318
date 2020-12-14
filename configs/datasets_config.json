@@ -1,0 +1,130 @@
+{
+    "MSRDailyAct3D":{
+        "data_dir":"<$data_root>/MSRDailyAct3D",
+        "data_attr":{
+            "n_acts":16,
+            "n_subs":10,
+            "n_exps":2,
+            "n_names":["drink", "eat", "read book", "call cellphone",
+                       "write on a paper", "use laptop", "use vacuum cleaner", "cheer up",
+                       "sit still", "toss paper", "play game", "lie down on sofa",
+                       "walk", "play guitar", "stand up", "sit down"]
+        },
+        "file_format":"a{:02d}_s{:02d}_e{:02d}",
+        "data_type":{
+            "Depth":"<$data_dir>/<$file_format>_depth.bin",
+            "Skeleton":"<$data_dir>/<$file_format>_skeleton.txt",
+            "RGB":"<$data_dir>/<$file_format>_rgb.avi",
+            "Pre_gradient":"<$data_dir>/<$file_format>_depth_g3.bin"
+        },
+        "data_constant_check": true,
+        "file_list_dir":"<$protocol_root>",
+        "eval_config_file":"<$file_list_dir>/<$data_name>_protocol_config.json",
+        "eval_protocols":{
+            "cross_subjects":{
+                "eval_times":1,
+                "eval_subs":[2, 4, 6, 8, 10],
+                "file_list_train": "<$file_list_dir>/<$data_name>_<$protocol_item>_train.txt",
+                "file_list_test": "<$file_list_dir>/<$data_name>_<$protocol_item>_test.txt"
+            }
+        }
+    },
+    "MSRAction3D":{
+        "data_dir":"<$data_root>/MSRAction3D",
+        "data_attr":{
+            "n_acts":20,
+            "n_subs":10,
+            "n_exps":3,
+            "n_names":["high arm wave", "horizontal arm wave", "hammer", "hand catch", "forward punch",
+                       "high throw", "draw x", "draw tick", "draw circle", "hand clap",
+                       "two hand wave", "side-boxing", "bend", "forward kick", "side kick",
+                       "jogging", "tennis swing", "tennis serve", "golf swing", "pick up & throw"]
+        },
+        "file_format":"a{:02d}_s{:02d}_e{:02d}",
+        "data_type":{
+            "Depth":"<$data_dir>/<$file_format>_sdepth.bin",
+            "Skeleton":"<$data_dir>/<$file_format>_skeleton.txt"
+        },
+        "data_constant_check": false,
+        "file_list_dir":"<$protocol_root>",
+        "eval_config_file":"<$file_list_dir>/<$data_name>_protocol_config.json",
+        "eval_protocols":{
+            "cross_subjects":{
+                "eval_times":1,
+                "eval_subs":[2, 4, 6, 8, 10],
+                "file_list_train": "<$file_list_dir>/<$data_name>_<$protocol_item>_train.txt",
+                "file_list_test": "<$file_list_dir>/<$data_name>_<$protocol_item>_test.txt"
+            }
+        }
+    },
+
+    "UOWCombined3D":{
+        "data_dir":"<$data_root>/UOWCombined3D",
+        "data_attr":{
+            "n_acts":16,
+            "n_subs":10,
+            "n_exps":2,
+            "n_names":["drink", "eat", "read book", "call cellphone",
+                       "write on a paper", "use laptop", "use vacuum cleaner", "cheer up",
+                       "sit still", "toss paper", "play game", "lie down on sofa",
+                       "walk", "play guitar", "stand up", "sit down"]
+        },
+        "file_format":"a{:03d}_s{:03d}_e{:03d}",
+        "data_type":{
+            "Depth":"<$data_dir>/<$file_format>_depth.bin",
+            "Skeleton":"<$data_dir>/<$file_format>_skeleton.txt",
+            "Pre_gradient":"<$data_dir>/<$file_format>_depth_g3.bin"
+        },
+        "data_constant_check": false,
+        "file_list_dir":"<$protocol_root>",
+        "eval_config_file":"<$file_list_dir>/<$data_name>_protocol_config.json",
+        "eval_protocols":{
+            "cross_subjects":{
+                "eval_times":1,
+                "eval_subs":[2, 4, 6, 8, 10],
+                "file_list_train": "<$file_list_dir>/<$data_name>_<$protocol_item>_train.txt",
+                "file_list_test": "<$file_list_dir>/<$data_name>_<$protocol_item>_test.txt"
+            }
+        }
+    },
+
+    "NTU_RGB+D":{
+        "data_dir":"<$data_root>/ntu_rgb+d",
+        "data_attr":{
+            "n_setup": 17,
+            "n_camera": 3,
+            "n_person": 40,
+            "n_repeat": 2,
+            "n_action": 60,
+            "n_names": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
+                        "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
+                        "21", "22", "23", "24", "25", "26", "27", "28", "29", "30",
+                        "31", "32", "33", "34", "35", "36", "37", "38", "39", "40",
+                        "41", "42", "43", "44", "45", "46", "47", "48", "49", "50",
+                        "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"]
+        },
+        "file_format":"S{:03d}C{:03d}P{:03d}R{:03d}A{:03d}",
+        "data_type":{
+            "Depth":"<$data_dir>/depth_masked",
+            "Skeleton":"<$data_dir>/skeleton"
+        },
+        "data_constant_check": false,
+        "file_list_dir":"<$protocol_root>",
+        "eval_config_file":"<$file_list_dir>/<$data_name>_protocol_config.json",
+        "eval_protocols":{
+            "cross_subjects": {
+                "eval_times": 1,
+                "train_subs": [1, 2, 4, 5, 8, 9, 13, 14, 15, 16, 17, 18, 19, 25, 27, 28, 31, 34, 35, 38],
+                "file_list_train": "<$file_list_dir>/<$data_name>_<$protocol_item>_train.txt",
+                "file_list_test": "<$file_list_dir>/<$data_name>_<$protocol_item>_test.txt"
+            },
+            "cross_view": {
+                "eval_times": 1,
+                "train_cam": [2, 3],
+                "file_list_train": "<$file_list_dir>/<$data_name>_<$protocol_item>_train.txt",
+                "file_list_test": "<$file_list_dir>/<$data_name>_<$protocol_item>_test.txt"
+            }
+        }
+    }
+}
+
